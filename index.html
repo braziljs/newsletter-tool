@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BrazilJS Weekly</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="html-to-markdown.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>    
+</head>
+<body>
+    <div class="header">
+        <div class="view-btn view-html" onclick="UI.update('html')">HTML</div>
+        <div class="view-btn view-md" onclick="UI.update('md')">MarkDown</div>
+        <div class="view-btn view-outline" onclick="UI.update('outline')">Outline</div>
+    </div>
+    <div id="container"></div>
+    <div id="html-container">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;">
+                <tbody>
+                    <tr>
+                        <td valign="top" id="templatePreheader" style="background:#FAFAFA none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top" id="templateHeader" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 0;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+                                                            <div style="text-align: center;">
+                                                                <span style="font-size:24px">
+                                                                    <strong id="TAG_title">...</strong>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnImageBlockOuter">
+                                    <tr>
+                                        <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                            class="mcnImageBlockInner">
+                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                            <img align="center" alt="" src="https://gallery.mailchimp.com/77b6594f10bba05dcc722c80e/images/0a76330b-94b4-45dc-b636-4fa4228d735c.jpg"
+                                                                width="564" style="max-width: 1024px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                class="mcnImage">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+                                                            <div style="text-align: center;">
+                                                                <strong>BrazilJS&nbsp;Weekly</strong>&nbsp;- A seleção semanal que reúne as novidades
+                                                                <br> sobre o desenvolvimento Web no Brasil e no mundo
+                                                                <br>
+                                                                <br>
+                                                                <span style="font-size:14px">
+                                                                    <em>Sugira conteúdo para a Weekly usando o nosso canal de issues no
+                                                                        <strong>
+                                                                            <a href="https://github.com/braziljs/weekly/issues" target="_blank"
+                                                                                style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Github</a>
+                                                                        </strong>
+                                                                    </em>
+                                                                </span>
+                                                                <br><br> 
+                                                                <div id="TAG_CONTRIBUTORS">
+                                                                    Um agradecimento especial aos
+                                                                    <strong>0&nbsp;</strong>
+                                                                    <a href="https://github.com/braziljs/weekly/issues/196"
+                                                                        target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">colaboradores</a> da edição nº
+                                                                    <strong>...</strong>!
+                                                                    <br>
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">
+                                <tbody class="mcnDividerBlockOuter">
+                                    <tr>
+                                        <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top-width: 2px;border-top-style: groove;border-top-color: #FFDE17;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                            <span></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--            
+                            <td class="mcnDividerBlockInner" style="padding: 18px;">
+                            <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+            -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" id="templateBody" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 2px solid #EAEAEA;padding-top: 0;padding-bottom: 9px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <!--[if gte mso 9]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+                <![endif]-->
+                                <tbody class="mcnBoxedTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnBoxedTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                            <!--[if gte mso 9]>
+                            <td align="center" valign="top" ">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                class="mcnBoxedTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                                            <table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;">
+                                                                            Em vídeo
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if gte mso 9]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if gte mso 9]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+                                                            <div class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                                                <div class="comment-body">
+                                                                    <div class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                                                        <a href="https://youtu.be/NSNPkMBCqiU" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">
+                                                                            <img data-file-id="997" height="337" src="https://gallery.mailchimp.com/77b6594f10bba05dcc722c80e/images/7ea3c72e-ac4b-4630-99fa-7f09756b8c84.png"
+                                                                                style="border: 0px;width: 600px;height: 337px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                width="600">
+                                                                        </a>
+                                                                        <br>
+                                                                        <br> Link para o vídeo:&nbsp;
+                                                                        <a href="https://youtu.be/NSNPkMBCqiU"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">https://youtu.be/NSNPkMBCqiU</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <!--[if gte mso 9]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+                <![endif]-->
+                                
+                            <div id="TAG_NEWS_LIST"></div>
+
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <!--[if gte mso 9]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+                <![endif]-->
+                                <tbody class="mcnBoxedTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnBoxedTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                            <!--[if gte mso 9]>
+                            <td align="center" valign="top" ">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                class="mcnBoxedTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                                            <table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;">
+                                                                            Cartoon da semana
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if gte mso 9]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if gte mso 9]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+                                                            <div class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                                                <div class="comment-body">
+                                                                    <div class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                                                        <br>
+                                                                        <br> Cartoon via<br/>
+                                                                        <a href="http://www.commitstrip.com/en/?s=web"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">CommitStrip</a><br>
+                                                                        <a href="https://vidadeprogramador.com.br/"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Vida de programador</a><br>
+                                                                        <a href="https://vidadesuporte.com.br/?s=web"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Vida de suporte</a><br>
+                                                                        <a href="http://dilbert.com/search_results?terms=web"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Dilbert</a><br>
+                                                                        <a href="http://dilbert.com/search_results?terms=web"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Dilbert</a><br>
+                                                                        <a href="https://www.vidadehipster.com.br/"
+                                                                            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">Hipster tech</a><br>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <div id="TAG_CATEGORIES"></div>
+                            
+                            <table class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <!--[if gte mso 9]>
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+                <![endif]-->
+                                <tbody class="mcnBoxedTextBlockOuter">
+                                    <tr>
+                                        <td class="mcnBoxedTextBlockInner" valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                            <!--[if gte mso 9]>
+                            <td align="center" valign="top" ">
+                            <![endif]-->
+                                            <table style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                class="mcnBoxedTextContentContainer" cellspacing="0" cellpadding="0" border="0" width="100%"
+                                                align="left">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                                            <table class="mcnTextContentContainer" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                cellspacing="0" cellpadding="18" border="0" width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="mcnTextContent" style="color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"
+                                                                            valign="top">
+                                                                            Frase da Semana
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if gte mso 9]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if gte mso 9]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+            
+                                                            <div id="phrase">
+                                                                <p lang="en" style="text-align: center;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;">
+                                                                    <span style="font-size:20px">"Loren Ipsum dolor sit amet"</span>
+                                                                    <br>
+                                                                    <br>
+                                                                    <span style="-webkit-text-stroke-width: 0px;background-color: #FFFFFF;color: #292F33;display: inline !important;float: none;font-family: helveticaneue,helvetica neue,helvetica,arial,verdana,sans-serif;font-size: 14px;font-style: normal;font-variant: normal;font-weight: 300;letter-spacing: normal;line-height: 18.0009px;orphans: auto;text-align: left;text-indent: 0px;text-transform: none;white-space: pre-wrap;widows: 1;word-spacing: 0px;">-</span>
+                                                                    <span style="-webkit-text-stroke-width: 0px;background-color: #FFFFFF;color: #292F33;display: inline !important;float: none;font-family: helveticaneue,helvetica neue,helvetica,arial,verdana,sans-serif;font-size: 14px;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-weight: 300;letter-spacing: normal;line-height: 18.0009px;orphans: 2;text-align: left;text-indent: 0px;text-transform: none;white-space: pre-wrap;widows: 2;word-spacing: 0px;">
+                                                                    </span>Me and Myself
+                                                                    <br>
+                                                                    <br> Frase via
+                                                                    <a href="https://twitter.com/CodeWisdom" target="_blank"
+                                                                        style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">CodeWisdow</a>
+                                                                </p>
+                                                            </div>
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--[if mso]>
+                            </td>
+                            <![endif]-->
+            
+                                            <!--[if mso]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" id="templateFooter" style="background:#FAFAFA none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;">
+                            <table class="mcnFollowBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tbody class="mcnFollowBlockOuter">
+                                    <tr>
+                                        <td style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnFollowBlockInner"
+                                            valign="top" align="center">
+                                            <table class="mcnFollowContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="padding-left: 9px;padding-right: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                            align="center">
+                                                            <table style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                class="mcnFollowContent" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="padding-top: 9px;padding-right: 9px;padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                            valign="top" align="center">
+                                                                            <table align="center" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td valign="top" align="center" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                            <!--[if mso]>
+                                                <table align="center" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                <![endif]-->
+            
+                                                                                            <!--[if mso]>
+                                                    <td align="center" valign="top">
+                                                    <![endif]-->
+            
+            
+                                                                                            <table style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                align="left" cellspacing="0" cellpadding="0"
+                                                                                                border="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="padding-right: 10px;padding-bottom: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                            class="mcnFollowContentItemContainer"
+                                                                                                            valign="top">
+                                                                                                            <table class="mcnFollowContentItem" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td style="padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                                            valign="middle"
+                                                                                                                            align="left">
+                                                                                                                            <table width="" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+            
+                                                                                                                                        <td class="mcnFollowIconContent" width="24" valign="middle" align="center" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                            <a href="http://www.twitter.com/braziljs" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                                <img
+                                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png"
+                                                                                                                                                    style="display: block;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                                                                    class=""
+                                                                                                                                                    width="24"
+                                                                                                                                                    height="24">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+            
+            
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+            
+                                                                                            <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+            
+                                                                                            <!--[if mso]>
+                                                    <td align="center" valign="top">
+                                                    <![endif]-->
+            
+            
+                                                                                            <table style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                align="left" cellspacing="0" cellpadding="0"
+                                                                                                border="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="padding-right: 10px;padding-bottom: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                            class="mcnFollowContentItemContainer"
+                                                                                                            valign="top">
+                                                                                                            <table class="mcnFollowContentItem" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td style="padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                                            valign="middle"
+                                                                                                                            align="left">
+                                                                                                                            <table width="" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+            
+                                                                                                                                        <td class="mcnFollowIconContent" width="24" valign="middle" align="center" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                            <a href="http://www.facebook.com/braziljs" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                                <img
+                                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png"
+                                                                                                                                                    style="display: block;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                                                                    class=""
+                                                                                                                                                    width="24"
+                                                                                                                                                    height="24">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+            
+            
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+            
+                                                                                            <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+            
+                                                                                            <!--[if mso]>
+                                                    <td align="center" valign="top">
+                                                    <![endif]-->
+            
+            
+                                                                                            <table style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                align="left" cellspacing="0" cellpadding="0"
+                                                                                                border="0">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td style="padding-right: 0;padding-bottom: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                            class="mcnFollowContentItemContainer"
+                                                                                                            valign="top">
+                                                                                                            <table class="mcnFollowContentItem" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                <tbody>
+                                                                                                                    <tr>
+                                                                                                                        <td style="padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                                                                                            valign="middle"
+                                                                                                                            align="left">
+                                                                                                                            <table width="" align="left" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                <tbody>
+                                                                                                                                    <tr>
+            
+                                                                                                                                        <td class="mcnFollowIconContent" width="24" valign="middle" align="center" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                            <a href="https://braziljs.org" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                                                                <img
+                                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png"
+                                                                                                                                                    style="display: block;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                                                                    class=""
+                                                                                                                                                    width="24"
+                                                                                                                                                    height="24">
+                                                                                                                                            </a>
+                                                                                                                                        </td>
+            
+            
+                                                                                                                                    </tr>
+                                                                                                                                </tbody>
+                                                                                                                            </table>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </tbody>
+                                                                                                            </table>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+            
+                                                                                            <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+            
+                                                                                            <!--[if mso]>
+                                                </tr>
+                                                </table>
+                                                <![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;table-layout: fixed !important;">
+                                <tbody class="mcnDividerBlockOuter">
+                                    <tr>
+                                        <td class="mcnDividerBlockInner" style="min-width: 100%;padding: 10px 18px 25px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-top-width: 2px;border-top-style: solid;border-top-color: #EEEEEE;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                            <span></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--            
+                            <td class="mcnDividerBlockInner" style="padding: 18px;">
+                            <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+            -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+                                                class="mcnTextContentContainer">
+                                                <tbody>
+                                                    <tr>
+            
+                                                        <td valign="top" class="mcnTextContent" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #656565;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;">
+            
+                                                            <em>Copyright © 2018 BrazilJS, All rights reserved.</em>
+                                                            <br>
+            
+                                                            <br>
+                                                            <br> Want to change how you receive these emails?
+                                                            <br> You can
+                                                            <a href="https://braziljs.us5.list-manage.com/profile?u=77b6594f10bba05dcc722c80e&amp;id=e6beed4270&amp;e=[UNIQID]"
+                                                                style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;">update your preferences</a> or
+                                                            <a href="https://braziljs.us5.list-manage.com/unsubscribe?u=77b6594f10bba05dcc722c80e&amp;id=e6beed4270&amp;e=[UNIQID]&amp;c=c86953f75b"
+                                                                style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;">unsubscribe from this list</a>
+                                                            <br>
+                                                            <br>
+            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+
+
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="utils.js"></script>
+    <script src="classes/markdown.js"></script>
+    <script src="classes/ui.js"></script>
+    <script src="classes/github.js"></script>
+    <script src="classes/weekly.js"></script>
+    <script src="classes/comment.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
