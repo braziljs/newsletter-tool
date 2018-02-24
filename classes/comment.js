@@ -7,8 +7,10 @@ class Comment {
     applyData (data) {
         this.mdBody = data.body
         this.htmlBody = window.markdown.toHTML(data.body)
-        this.title = this.mdBody.match(/^[\*_][\*_]\[(.+)\].+[\*_][\*_][\n\r]/)[1]
-        this.link = this.mdBody.match(/^[\*_][\*_].+\((.+)\)[\*_][\*_][\n\r]/)[1]
+        this.title = this.mdBody.match(/^[\*_][\*_]\[(.+)\].+[\*_][\*_][\n\r]/)
+        this.title = this.title ? this.title[1] : ''
+        this.link = this.mdBody.match(/^[\*_][\*_].+\((.+)\)[\*_][\*_][\n\r]/)
+        this.link = this.link ? this.link[1] : ''
         this.outline = `<a href="${this.link}">${this.title}</a>:<br/>${this.link}<br/>`
         this.created_at = data.created_at
         this.id = data.id

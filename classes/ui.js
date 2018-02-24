@@ -1,6 +1,6 @@
 
 const UI = {
-    currentIssue: 196,
+    currentIssue: null,
     currentWeekly: null,
     main: document.getElementById('container'),
     HTML: {
