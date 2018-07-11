@@ -7,7 +7,8 @@ window.markdown = {
         return str
     },
     applyNewLines (str) {
-        return str.replace(/\n\r?/g, '<br />')
+        console.log('?????', {str});
+        return str.replace(/(\n\r?)|(\<br\/?\>)/g, '&nbsp;&nbsp;<br />')
     },
     applyBold (str) {
         const boldRX = /[\*_][\*_](.+)[\*_][\*_]/
