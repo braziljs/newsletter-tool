@@ -7,7 +7,6 @@ window.markdown = {
         return str
     },
     applyNewLines (str) {
-        console.log('?????', {str});
         return str.replace(/(\n\r?)|(\<br\/?\>)/g, '&nbsp;&nbsp;<br />')
     },
     applyBold (str) {
