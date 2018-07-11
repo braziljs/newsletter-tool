@@ -18,7 +18,9 @@ class Github {
             delete options[key]
         });
 
-        if (Object.keys(options).length) path += '?' + querystring.stringify(options)
+        if (Object.keys(options).length) {
+            path += '?' + querystring.stringify(options);
+        }
 
         return path
     }

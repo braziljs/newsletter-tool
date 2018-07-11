@@ -26,7 +26,7 @@ const UI = {
 			handle: ".drag-handler",
 			placeholder: "placeholder"
         })
-        $( ".category-item" ).disableSelection();
+        $(".category-item").disableSelection();
         $(".delete-handler").click(event => {
             if (window.confirm('Are you sure you want to remove this item?')) {
                 let target = event.target.parentNode
@@ -142,8 +142,8 @@ const UI = {
                                             ${
                                                 weekly.categories[cat].map(item => {
                                                     return `<div class="category-item">
-                                                    <div class='drag-handler'>⎶</div>
-                                                    <div class='delete-handler'>✖</div><!-- ❌✖ -->
+                                                    <div class='drag-handler noselect'>⎶</div>
+                                                    <div class='delete-handler noselect'>✖</div><!-- ❌✖ -->
                                                     ${
                                                         type === 'html'
                                                             ? item.htmlBody
