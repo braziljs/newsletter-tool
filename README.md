@@ -11,12 +11,23 @@ However, that's a lot of steps in this process which can be automated, and with 
 The `newsletter-tool` aims to help BrazilJS' editors.  
 Here are some key steps done every single week to build our beloved newsletter:
 
-- Create a new campaign (normally a copy of the last one) on [Mailchimp](https://mailchimp.com/)(the service we use to create and send the newsletter)  
+- Create a new campaign (normally a copy of the last one) on [Mailchimp](https://mailchimp.com/) (the service we use to create and send the newsletter)  
 - Sort in categories (normally *news*, *articles*, *tools* and *others*)  
 - Sort the content by relevance  
 - Insert each link on the campaign email template 
 - Review
 
 That's just the main steps 😓  
-As we have a video version of the newsletter ([BrazilJS Weekly on YouTube](https://www.youtube.com/braziljs)) and a text version on [BrazilJS' portal](https://braziljs.org/), which one with a different approach, you can see that's a lot of work.  
+As we have a video version of the newsletter ([BrazilJS Weekly on YouTube](https://www.youtube.com/braziljs)) and a text version on [BrazilJS' portal](https://braziljs.org/), which one with a different approach, the task could be tedious.  
 
+The `Newslleter Tool` is basically a JavaScript piece of software automation tool.  
+Of course, the tool is focused on solving our own problems and is 100% based on our community-curatorship process, but we strong believe in this model, so every Newsletter owner can try to adapt to it and use and evolve the tool.
+
+# How to run
+```javascript
+npm install
+npm start
+```
+Go to `http://localhost:8080/` and you should see a simulated newsletter based on our last open issue on the BrazilJS Weekly repository.  
+
+![BrazilJS Weekly Tool in action](https://imgur.com/a/4rH0TkO)
