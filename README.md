@@ -30,4 +30,4 @@ npm start
 ```
 Go to `http://localhost:8080/` and you should see a simulated newsletter based on our last open issue on the BrazilJS Weekly repository.  
 
-![BrazilJS Weekly Tool in action](https://imgur.com/a/4rH0TkO)
+![BrazilJS Weekly Tool in action](https://i.imgur.com/GpToL45.png)
