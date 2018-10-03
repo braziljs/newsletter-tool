@@ -142,8 +142,6 @@ const UI = {
                                             ${
                                                 weekly.categories[cat].map(item => {
                                                     return `<div class="category-item">
-                                                    <div class='drag-handler noselect'>⎶</div>
-                                                    <div class='delete-handler noselect'>✖</div><!-- ❌✖ -->
                                                     ${
                                                         type === 'html'
                                                             ? item.htmlBody
