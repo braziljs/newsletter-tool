@@ -1,3 +1,4 @@
+const style = "mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"
 
 const UI = {
     currentIssue: null,
@@ -16,11 +17,10 @@ const UI = {
             type = weekly
             weekly = UI.currentWeekly
         }
-        let str = ''
         UI.applyHeader(weekly, type)
+        console.log(weekly)
         UI.HTML.news.innerHTML = UI.applyCategory(weekly, 'Notícias', type)
-        UI.applyCartoon(weekly, type)
-        UI.applyCategories(weekly, type)
+        //UI.applyCartoon(weekly, type)
 
         $(".comment-item").sortable({
 			handle: ".drag-handler",
@@ -37,151 +37,174 @@ const UI = {
         UI.currentWeekly = weekly
     },
     applyHeader (weekly) {
-        UI.HTML.title.innerHTML = `Edição&nbsp;#${weekly.edition} - ...`
-        UI.HTML.contributors.innerHTML = `Um agradecimento especial aos
-        <strong>${Object.keys(weekly.contributors).length}&nbsp;</strong>
-        <a href="https://github.com/braziljs/weekly/issues/${weekly.number}"
-            target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">colaboradores</a> da edição nº
-        <strong>${weekly.edition}</strong>!
-        <br>
-        <br>
-        ${
-            Object.keys(weekly.contributors).map(key => {
-                let contrib = weekly.contributors[key]
-                return `<a href="${contrib.url}" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">
-                <img alt="${contrib.login}" src="${contrib.avatar}"
-                    title="${contrib.login}" width="40" style="border: 0;height: auto !important;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"></a>&nbsp;
-            `
-            }).join(' ')
-        }
+        UI.HTML.title.innerHTML = `${weekly.title}`
+        UI.HTML.contributors.innerHTML = `
+            Um agradecimento especial aos
+            <strong>${Object.keys(weekly.contributors).length}</strong>
+            <a href="https://github.com/braziljs/weekly/issues/${weekly.number}"
+            target="_blank" style=${style}>colaboradores</a> da edição nº
+            <strong>${weekly.edition}</strong>!
+            <br><br>
+            ${
+                Object.keys(weekly.contributors).map(key => {
+                    let contrib = weekly.contributors[key]
+                    return `
+                        <a href="${contrib.url}" style=${style}>
+                        <img 
+                            alt="${contrib.login}" 
+                            src="${contrib.avatar}"
+                            title="${contrib.login}" 
+                            width="40" 
+                            style="border: 0;height: auto !important;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                        ></a>&nbsp;
+                    `
+                }).join(' ')
+            }
         `
     },
-    applyCartoon (weekly) {
-        // if (!weekly.categories.cartoon) {
-            
-            // }
-    },
-    applyCategories (weekly, type) {
-        let cats = Object.keys(weekly.categories).sort().filter(cat => cat !== 'Notícias')
+    applyCategory (weekly, filterName, type) {
         let outputStr = ''
-        cats.forEach(cat => {
-            outputStr += UI.applyCategory(weekly, cat, type)
+
+        const categoriesName = Object.keys(weekly.categories).sort()
+        const notNews = categoriesName.filter( item => item !== filterName)
+        const onlyNews = categoriesName.filter( item => item === filterName)
+
+        onlyNews.forEach( item => {
+            outputStr += UI.applyDesignCategory(weekly, item, type)
         })
+
+        notNews.forEach( item => {
+            outputStr += UI.applyDesignCategory(weekly, item, type)
+        })
+        
         UI.HTML.categories.innerHTML = outputStr
+        return categoriesName
     },
-    applyCategory (weekly, cat, type) {
-        // let cats = Object.keys(weekly.categories).sort().filter(cat => cat !== 'Notícias')
-        // let outputStr = ''
-        // cats.forEach(cat => {
-            let categoryHTML = `<table class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
-            width="100%" cellspacing="0" cellpadding="0" border="0">
+    applyDesignCategory (weekly, cat, type) {
+        let categoryHTML = `
+            <table class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
+            
             <!--[if gte mso 9]>
-<table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
-<![endif]-->
-            <tbody class="mcnBoxedTextBlockOuter">
-                <tr>
-                    <td class="mcnBoxedTextBlockInner" valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
+            <![endif]-->
 
-                        <!--[if gte mso 9]>
-        <td align="center" valign="top" ">
-        <![endif]-->
-                        <table style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
-                            class="mcnBoxedTextContentContainer" width="100%" align="left" cellspacing="0" cellpadding="0"
-                            border="0">
-                            <tbody>
-                                <tr>
-                                    <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                        <table class="mcnTextContentContainer" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
-                                            width="100%" cellspacing="0" border="0">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;"
-                                                        valign="top">
-                                                        ${cat}&nbsp;&nbsp;
-                                                        <span class="copy-btn" data-clipboard-target="#${cat}">📋</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!--[if gte mso 9]>
-        </td>
-        <![endif]-->
+                <tbody class="mcnBoxedTextBlockOuter">
+                    <tr>
+                        <td class="mcnBoxedTextBlockInner" valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
-                        <!--[if gte mso 9]>
-        </tr>
-        </table>
-        <![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>`
-            let listHTML = `<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-            <tbody class="mcnTextBlockOuter">
-                <tr>
-                    <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                        <!--[if mso]>
-        <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-        <tr>
-        <![endif]-->
+                            <!--[if gte mso 9]>
+                            <td align="center" valign="top" ">
+                            <![endif]-->
 
-                        <!--[if mso]>
-        <td valign="top" width="600" style="width:600px;">
-        <![endif]-->
-                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
-                            width="100%" class="mcnTextContentContainer">
-                            <tbody>
-                                <tr>
+                            <table style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnBoxedTextContentContainer" width="100%" align="left" cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <table class="mcnTextContentContainer" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" valign="top">
+                                                            ${cat}&nbsp;&nbsp;
+                                                            <span class="copy-btn" data-clipboard-target="#${cat}">📋</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                                    <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                            <!--[if gte mso 9]>
+                            </td>
+                            <![endif]-->
 
-                                        <div id="${cat}" class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                            <!--[if gte mso 9]>
+                            </tr>
+                            </table>
+                            <![endif]-->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        `
+
+        let listHTML = `
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <tbody class="mcnTextBlockOuter">
+                    <tr>
+                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                            <!--[if mso]>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <tr>
+                            <![endif]-->
+
+                            <!--[if mso]>
+                            <td valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" class="mcnTextContentContainer">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                            <div id="${cat}" class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
                                             ${
                                                 weekly.categories[cat].map(item => {
-                                                    return `<div class="category-item">
-                                                    ${
-                                                        type === 'html'
-                                                            ? item.htmlBody
-                                                            : type === 'md'
-                                                                ? item.mdBody
-                                                                : item.outline
-                                                    }
-                                                    ${
-                                                        type !== 'outline'
-                                                            ? `<br>
-                                                            <em>Indicado por&nbsp;
-                                                                <a href="${item.author.url}" target="_blank"
-                                                                    style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">@${item.author.login}</a>
-                                                            </em>
-                                                            <br>`
-                                                            : ''
-                                                    }
-                                                    <br>
-                                                </div>`
+                                                    return `
+                                                        <div class="category-item">
+                                                        ${
+                                                            type === 'html'
+                                                                ? item.htmlBody
+                                                                : type === 'md'
+                                                                    ? item.mdBody
+                                                                    : item.outline
+                                                        }
+                                                        ${
+                                                            type !== 'outline'
+                                                                ? `
+                                                                <br>
+                                                                <em>Indicado por&nbsp;
+                                                                    <a 
+                                                                        href="${item.author.url}" target="_blank"
+                                                                        style="${style}">@${item.author.login}
+                                                                    </a>
+                                                                </em>
+                                                                <br>`
+                                                                : ''
+                                                        }
+                                                        <br>
+                                                        </div>
+                                                    `
                                                 }).join('')
                                             }
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <!--[if mso]>
-        </td>
-        <![endif]-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                        <!--[if mso]>
-        </tr>
-        </table>
-        <![endif]-->
-                    </td>
-                </tr>
-            </tbody>
-        </table>`
-        return categoryHTML + listHTML
-        // })
+                            <!--[if mso]>
+                                </td>
+                            <![endif]-->
+
+                            <!--[if mso]>
+                                </tr>
+                                </table>
+                            <![endif]-->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        `
+    return categoryHTML + listHTML
+    },
+    applyCartoon (weekly) {
+    // if (!weekly.categories.cartoon) {
+        
+    // }
     }
 }
 
