@@ -37,9 +37,9 @@ const UI = {
         UI.currentWeekly = weekly
     },
     applyHeader (weekly) {
-        UI.HTML.title.innerHTML = `Edição&nbsp;#${weekly.edition} - ...`
+        UI.HTML.title.innerHTML = `${weekly.title}`
         UI.HTML.contributors.innerHTML = `Um agradecimento especial aos
-        <strong>${Object.keys(weekly.contributors).length}&nbsp;</strong>
+        <strong>${Object.keys(weekly.contributors).length}</strong>
         <a href="https://github.com/braziljs/weekly/issues/${weekly.number}"
             target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">colaboradores</a> da edição nº
         <strong>${weekly.edition}</strong>!
