@@ -18,7 +18,6 @@ const UI = {
             weekly = UI.currentWeekly
         }
         UI.applyHeader(weekly, type)
-        console.log(weekly)
         UI.HTML.news.innerHTML = UI.applyCategory(weekly, 'Notícias', type)
         //UI.applyCartoon(weekly, type)
 
