@@ -1,7 +1,3 @@
-const { apiUrl, reposConfig } = require('../constants')
-
-const urlDefault = apiUrl + reposConfig
-
 class Github {
   static get urls() {
     return {
@@ -43,4 +39,3 @@ class Github {
   }
 }
 
-module.exports = Github
