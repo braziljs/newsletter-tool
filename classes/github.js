@@ -1,15 +1,22 @@
+const { apiUrl, reposConfig } = require('../constants');
+
+const urlDefault = apiUrl + reposConfig;
 
 class Github {
-    static get urls () {
+    static get urls() {
         return {
-            allWeeklyIssues: "https://api.github.com/repos/braziljs/weekly/issues?labels=campaign&state=all",
-            inCampaign: "https://api.github.com/repos/braziljs/weekly/issues?labels=campaign",
-            issue: "https://api.github.com/repos/braziljs/weekly/issues/:issue",
-            comments: "https://api.github.com/repos/braziljs/weekly/issues/:issue/comments?per_page=99"
+            allWeeklyIssues: this.generateUrl("?labels=campaign&state=all"),
+            inCampaign: this.generateUrl("?labels=campaign"),
+            issue: this.generateUrl("/:issue"),
+            comments: this.generateUrl("/:issue/comments?per_page=99")
         }
     }
 
-    static parseURL (path, options = {}) {
+    static generateUrl(param) {
+        return urlDefault + param;
+    }
+
+    static parseURL(path, options = {}) {
         const tokens = path.match(/:[^\/]+/g)
 
         tokens && tokens.forEach(token => {
@@ -22,13 +29,15 @@ class Github {
             path += '?' + querystring.stringify(options);
         }
 
-        return path
+        return path;
     }
-    
-    static get (url, options = {}) {
+
+    static get(url, options = {}) {
         return new Promise((resolve, reject) => {
-            url = this.parseURL(this.urls[url] || url, options)
-            getJSON(url).then(resolve).catch(reject)
+            url = this.parseURL(this.urls[url] || url, options);
+            getJSON(url).then(resolve).catch(reject);
         })
     }
 }
+
+module.exports = Github
