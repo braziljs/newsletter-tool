@@ -39,4 +39,3 @@ class Github {
   }
 }
 
-module.exports = Github
