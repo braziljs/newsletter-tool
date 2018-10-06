@@ -18,7 +18,7 @@ const UI = {
             weekly = UI.currentWeekly
         }
         UI.applyHeader(weekly, type)
-        UI.HTML.news.innerHTML = UI.applyCategory(weekly, 'Notícias', type)
+        UI.HTML.news.innerHTML = '<strong>Tags:</strong> ' + UI.applyCategory(weekly, 'Notícias', type).join(' - ')
         //UI.applyCartoon(weekly, type)
 
         $(".comment-item").sortable({
