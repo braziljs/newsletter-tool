@@ -1,4 +1,4 @@
-const Github = require('./github');
+const Github = require('./github')
 test('Generate the urls that will be used', () => {
   expect('https://api.github.com/repos/braziljs/weekly/issues?labels=campaign&state=all')
     .toBe(Github.generateUrl('?labels=campaign&state=all'));
