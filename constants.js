@@ -1,8 +1,8 @@
 // Github API
-const apiUrl = 'https://api.github.com/';
+const apiUrl = 'https://api.github.com/repos/braziljs/weekly';
 
 // repository stuture url default
-const reposConfig = 'repos/braziljs/weekly/issues';
+const reposConfig = '/issues';
 
 module.exports = {
   apiUrl,
