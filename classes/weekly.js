@@ -1,3 +1,4 @@
+const { apiUrl } = require('../constants');
 
 class Weekly {
     constructor (data) {
@@ -10,7 +11,7 @@ class Weekly {
     static isValid (data) {
         if (
             data.title.startsWith('Edição ') &&
-            data.repository_url === "https://api.github.com/repos/braziljs/weekly"
+            data.repository_url === apiUrl
         ) {
             if (data.labels.find(item => item.name === "campaign")) {
                 return true
