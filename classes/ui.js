@@ -81,6 +81,7 @@ const UI = {
     return categoriesName
   },
   applyDesignCategory(weekly, cat, type) {
+    let catsCollar = cat.split(' ').join('-')
     let categoryHTML = `
             <table class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
             
@@ -105,7 +106,7 @@ const UI = {
                                                     <tr>
                                                         <td class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" valign="top">
                                                             ${cat}&nbsp;&nbsp;
-                                                            <span class="copy-btn" data-clipboard-target="#${cat}">📋</span>
+                                                            <span class="copy-btn" data-clipboard-target="#${catsCollar}">📋</span>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -149,7 +150,7 @@ const UI = {
                                 <tbody>
                                     <tr>
                                         <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
-                                            <div id="${cat}" class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                            <div id="${catsCollar}" class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
                                             ${weekly.categories[cat]
                                               .map(item => {
                                                 return `
