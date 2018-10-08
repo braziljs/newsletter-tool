@@ -47,6 +47,10 @@ class Weekly {
             Github.get('comments', { issue: this.number })
             .then(comments => {
                 comments.forEach(data => {
+                    
+                    if(data.body.charAt(0) !== '*')
+                        data.body = this.applyMarkdown(data.body)
+
                     this.addComment(new Comment(data))
                 })
                 resolve(this)
@@ -57,5 +61,11 @@ class Weekly {
         this.contributors[comment.author.id] = comment.author
         this.categories[comment.category] = this.categories[comment.category] || []
         this.categories[comment.category].push(comment)
+    }
+    applyMarkdown (item){
+        item = item.replace(/^\[/, '**[')
+        item = item.replace(/\)/, ')**')
+        item = item.trim().replace(/(.+\w)$/, '*$1*')
+        return item
     }
 }

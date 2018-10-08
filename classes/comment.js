@@ -26,8 +26,7 @@ class Comment {
 
     applyCategory () {
         let cat = this.mdBody.match(/[\n\r][\*_](.+)[\*_]$/m)
-        cat = cat ? cat[1] : 'Outros'
-        let testCat = cat.toLowerCase()
+        let testCat = cat[1].toLowerCase()
 
         if (testCat.match(/(new|not.cia|novidade|an.nci|announc)/)) {
             cat = "Notícias"
@@ -39,7 +38,10 @@ class Comment {
             cat = "Vídeos"
         } else if (testCat.match(/(tool|demo|experiment|ferrament)/)) {
             cat = "Demos e Ferramentas"
+        } else {
+            cat = 'Outros'
         }
+        
         this.category = cat
     }
 }
