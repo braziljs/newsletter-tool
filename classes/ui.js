@@ -167,8 +167,7 @@ const UI = {
                                                                 <em>Indicado por&nbsp;
                                                                     <a 
                                                                         href="${item.author.url}" target="_blank"
-                                                                        style="${style}">@${item.author.login}
-                                                                    </a>
+                                                                        style="${style}">@${item.author.login}</a>
                                                                 </em>`
                                                                 : ''
                                                         }
