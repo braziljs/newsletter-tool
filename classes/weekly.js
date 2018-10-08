@@ -1,14 +1,14 @@
 const { apiUrl } = require('../constants');
 
 class Weekly {
-    constructor (data) {
+    constructor(data) {
         this.applyData(data)
         this.state = "partial"
         this.loadComments().then(UI.update)
         this.contributors = {}
         this.categories = {}
     }
-    static isValid (data) {
+    static isValid(data) {
         if (
             data.title.startsWith('Edição ') &&
             data.repository_url === apiUrl
@@ -19,16 +19,16 @@ class Weekly {
         }
         return false
     }
-    applyData (data) {
+    applyData(data) {
         this.id = data.id
         this.title = data.title
         this.number = data.number
         this.edition = this.title.match(' ([0-9]+) ')[1] || 0,
-        this.created_at = data.created_at
+            this.created_at = data.created_at
         this.closed_at = data.closed_at
         this.state = data.state
     }
-    filterData (data) {
+    filterData(data) {
         const { id, number, created_at, closed_at, title, state } = data
         return {
             id,
@@ -40,21 +40,21 @@ class Weekly {
             state
         }
     }
-    loadComments () {
+    loadComments() {
         return new Promise((resolve, reject) => {
             if (this.comments) {
                 return resolve(this.comments)
             }
             Github.get('comments', { issue: this.number })
-            .then(comments => {
-                comments.forEach(data => {
-                    this.addComment(new Comment(data))
+                .then(comments => {
+                    comments.forEach(data => {
+                        this.addComment(new Comment(data))
+                    })
+                    resolve(this)
                 })
-                resolve(this)
-            })
         })
     }
-    addComment (comment) {
+    addComment(comment) {
         this.contributors[comment.author.id] = comment.author
         this.categories[comment.category] = this.categories[comment.category] || []
         this.categories[comment.category].push(comment)
