@@ -1,4 +1,4 @@
-# Newslleter Tool
+# Newsletter Tool
 The __BrazilJS Weekly Newsletter__ is one of the best Brazilian resources to keep up-to-date with technology in general, specially Web Technologies.  
 Every week, more than 15,000 developers get the latest and more relevant news, tools, articles, etc., in their inboxes.  
 BrazilJS crew is responsible for the curatorship and review, but the main content feed come from the community.  
@@ -20,7 +20,7 @@ Here are some key steps done every single week to build our beloved newsletter:
 That's just the main steps 😓  
 As we have a video version of the newsletter ([BrazilJS Weekly on YouTube](https://www.youtube.com/braziljs)) and a text version on [BrazilJS' portal](https://braziljs.org/), which one with a different approach, the task could be tedious.  
 
-The `Newslleter Tool` is basically a JavaScript piece of software automation tool.  
+The `Newsletter Tool` is basically a JavaScript piece of software automation tool.  
 Of course, the tool is focused on solving our own problems and is 100% based on our community-curatorship process, but we strong believe in this model, so every Newsletter owner can try to adapt to it and use and evolve the tool.
 
 # How to run
