@@ -9,7 +9,7 @@ class Github {
   }
 
   static generateUrl(param) {
-    return urlDefault + param
+    return urlApi + param
   }
 
   static parseURL(path, options = {}) {
@@ -38,4 +38,3 @@ class Github {
     })
   }
 }
-
