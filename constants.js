@@ -1,8 +1,7 @@
-// Github API
 const apiUrl = 'https://api.github.com/'
+const gitUrl = 'https://www.github.com/'
+const repos = 'repos/'
+const struture = 'braziljs/weekly/issues'
 
-// repository struture url default
-const reposConfig = 'repos/braziljs/weekly/issues'
-
-// full URL
-const urlDefault = apiUrl + reposConfig
+const urlApi = apiUrl + repos + struture
+const urlGithub = gitUrl + struture

@@ -18,7 +18,7 @@ const UI = {
             weekly = UI.currentWeekly
         }
         UI.applyHeader(weekly, type)
-        UI.HTML.news.innerHTML = UI.applyCategory(weekly, 'Notícias', type)
+        UI.HTML.news.innerHTML = '<strong>Tags:</strong> ' + UI.applyCategory(weekly, 'Notícias', type).join(' - ')
         //UI.applyCartoon(weekly, type)
 
         $(".comment-item").sortable({
@@ -40,7 +40,7 @@ const UI = {
         UI.HTML.contributors.innerHTML = `
             Um agradecimento especial aos
             <strong>${Object.keys(weekly.contributors).length}</strong>
-            <a href="https://github.com/braziljs/weekly/issues/${weekly.number}"
+            <a href="${urlGithub}/${weekly.number}"
             target="_blank" style=${style}>colaboradores</a> da edição nº
             <strong>${weekly.edition}</strong>!
             <br><br>
@@ -152,7 +152,7 @@ const UI = {
                                             ${
                                                 weekly.categories[cat].map(item => {
                                                     return `
-                                                        <div class="category-item">
+                                                        <div class="category-item" style="padding: 1rem 0;">
                                                         ${
                                                             type === 'html'
                                                                 ? item.htmlBody
@@ -169,8 +169,7 @@ const UI = {
                                                                         href="${item.author.url}" target="_blank"
                                                                         style="${style}">@${item.author.login}
                                                                     </a>
-                                                                </em>
-                                                                <br>`
+                                                                </em>`
                                                                 : ''
                                                         }
                                                         <br>
