@@ -17,74 +17,29 @@ body {
     border-bottom: solid 1px #fff;
 }
 
-.noselect,
-.category-item>em:nth-last-of-type(2) {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-  }
-
-.view-btn {
-    cursor: pointer;
-}
-
-.copy-btn {
-    cursor: pointer;
-}
-
 #html-container {
     margin: auto;
     width: 600px;
 }
 
-.category-item {
-    position: relative;
+.style4{
+    min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%
 }
 
-.category-item .drag-handler,
-.category-item .delete-handler {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: solid 1px #000;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-}
-.category-item:hover {
-    outline: 1px solid #d0d0d0;
-    background: #f5f5f5;
+.style5 {
+    padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%
 }
 
-.category-item:hover .drag-handler,
-.category-item:hover .delete-handler {
-    visibility: visible;
+.style7 {
+    padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left
 }
-.category-item .drag-handler {
-    right: 40px;
-    top: -10px;
-    background-color: #f0f0f0;
-    cursor: row-resize;
-    visibility: hidden;
-}
-.category-item .delete-handler {
-    right: 5px;
-    top: -10px;
-    background-color: #f0f0f0;
-    color: #f00;
-    font-weight: bold;
-    cursor: pointer;
-    visibility: hidden;
-}
-
-.placeholder {
-    border: 1px solid black;
-    margin: 0 1em 1em 0;
-    height: 100px;
-    background: #f0f0f0;
-}
+/*
+style1="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;"
+style2="background:#FAFAFA none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FAFAFA;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;"
+style3="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 0;"
+style6="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+style9="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+style11="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+style12="max-width: 1024px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+style15="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+*/
