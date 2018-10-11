@@ -98,7 +98,7 @@ const UI = {
                                     <tr>
                                         <td class="style25" valign="top">
                                             ${cat}&nbsp;&nbsp;
-                                            <span class="copy-btn" data-clipboard-target="#${catsCollar}">📋</span>
+                                            <span class="copy-btn tooltip" data-clipboard-target="#${catsCollar}">📋<span class="tooltiptext">Copiar texto</span></span>
                                         </td>
                                     </tr>
                                 </tbody>
