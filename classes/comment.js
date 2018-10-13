@@ -5,7 +5,7 @@ class Comment {
 
   applyData(data) {
     this.mdBody = data.body
-    this.htmlBody = window.markdown.toHTML(data.body)
+    this.htmlBody = window.markdown.toHTML(data.body.replace(/\*\w*[^]\*/img, ""))
     this.title = this.mdBody.match(/^[\*_][\*_]\[(.+)\].+[\*_][\*_][\n\r]/)
     this.title = this.title ? this.title[1] : ''
     this.link = this.mdBody.match(/^[\*_][\*_].+\((.+)\)[\*_][\*_][\n\r]/)
