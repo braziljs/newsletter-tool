@@ -166,7 +166,7 @@ const UI = {
                                                           type !== 'outline'
                                                             ? `
                                                                 <br>
-                                                                <em>Indicado por&nbsp;
+                                                                <em>Indicado por
                                                                     <a 
                                                                         href="${item.author.url}" target="_blank"
                                                                         style="${style}">@${item.author.login}</a>
