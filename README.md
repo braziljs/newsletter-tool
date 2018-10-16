@@ -31,3 +31,5 @@ npm start
 Go to `http://localhost:8080/` and you should see a simulated newsletter based on our last open issue on the BrazilJS Weekly repository.  
 
 ![BrazilJS Weekly Tool in action](https://i.imgur.com/GpToL45.png)
+  
+If you use the vscode you need to install the `Prettier - Code formatter` extension to respect the `.prettierrc` file, you can install this extension with the following command: `ext install prettier-vscode`.  

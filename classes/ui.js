@@ -106,7 +106,7 @@ const UI = {
                                                     <tr>
                                                         <td class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" valign="top">
                                                             ${cat}&nbsp;&nbsp;
-                                                            <span class="copy-btn" data-clipboard-target="#${catsCollar}">📋</span>
+                                                            <span class="copy-btn tooltip" data-clipboard-target="#${catsCollar}">📋<span class="tooltiptext">Copiar texto</span></span>
                                                         </td>
                                                     </tr>
                                                 </tbody>
