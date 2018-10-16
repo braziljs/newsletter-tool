@@ -164,7 +164,7 @@ const UI = {
                 </tbody>
             </table>
         `
-    return categoryHTML + listHTML
+    return categoryHTML + listHTML;
   },
   applyCartoon(weekly) {
     // if (!weekly.categories.cartoon) {
