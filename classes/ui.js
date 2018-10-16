@@ -139,11 +139,11 @@ const UI = {
                                     <tr>
                                         <td valign="top" class="text_box">
                                             <div id="${catsCollar}" class="comment-item">
-                                            ${
-                                                weekly.categories[cat]
-                                                .map(item => { return this.returnCategoryItem(type, item) })
-                                                .join('')
-                                            }
+                                            ${weekly.categories[cat]
+                                              .map(item => {
+                                                return this.returnCategoryItem(type, item)
+                                              })
+                                              .join('')}
                                             </div>
                                         </td>
                                     </tr>
@@ -164,30 +164,25 @@ const UI = {
                 </tbody>
             </table>
         `
-    return categoryHTML + listHTML;
+    return categoryHTML + listHTML
   },
   applyCartoon(weekly) {
     // if (!weekly.categories.cartoon) {
     // }
   },
   returnCategoryItem(type, item) {
-    var resultado = '<div class="category-item">';
+    var resultado = '<div class="category-item">'
 
-    if(type === 'html')
-        resultado += item.htmlBody;
-    else if( type === 'md')
-        resultado += item.mdBody;
-    else
-        resultado += item.outline;
-    
+    if (type === 'html') resultado += item.htmlBody
+    else if (type === 'md') resultado += item.mdBody
+    else resultado += item.outline
 
-    if(type !== 'outline')
-        resultado += 
-            `
+    if (type !== 'outline')
+      resultado += `
             <br><em>Indicado por <a href="${item.author.url}" target="_blank" 
             style="ui_style">@${item.author.login}</a></em><br>
-            `;
+            `
 
-    return resultado += '</div>';
+    return (resultado += '</div>')
   }
 }
