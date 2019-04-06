@@ -1,6 +1,3 @@
-const style =
-  'mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;'
-
 const UI = {
   currentIssue: null,
   currentWeekly: null,
@@ -42,21 +39,20 @@ const UI = {
             Um agradecimento especial aos
             <strong>${Object.keys(weekly.contributors).length}</strong>
             <a href="${urlGithub}/${weekly.number}"
-            target="_blank" style=${style}>colaboradores</a> da edição nº
+            target="_blank" style="ui_style">colaboradores</a> da edição nº
             <strong>${weekly.edition}</strong>!
             <br><br>
             ${Object.keys(weekly.contributors)
               .map(key => {
                 let contrib = weekly.contributors[key]
                 return `
-                        <a href="${contrib.url}" style=${style}>
+                        <a href="${contrib.url}" style="ui_style">
                         <img 
                             alt="${contrib.login}" 
                             src="${contrib.avatar}"
                             title="${contrib.login}" 
                             width="40" 
-                            style="border: 0;height: auto !important;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
-                        ></a>&nbsp;
+                            class="contributors"></a>&nbsp;
                     `
               })
               .join(' ')}
@@ -83,34 +79,26 @@ const UI = {
   applyDesignCategory(weekly, cat, type) {
     let catsCollar = cat.split(' ').join('-')
     let categoryHTML = `
-            <table class="mcnBoxedTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
             
             <!--[if gte mso 9]>
                 <table align="center" border="0" cellspacing="0" cellpadding="0" width="100%">
             <![endif]-->
 
-                <tbody class="mcnBoxedTextBlockOuter">
+                <tbody>
                     <tr>
-                        <td class="mcnBoxedTextBlockInner" valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <td valign="top" class="style21">
 
                             <!--[if gte mso 9]>
                             <td align="center" valign="top" ">
                             <![endif]-->
 
-                            <table style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnBoxedTextContentContainer" width="100%" align="left" cellspacing="0" cellpadding="0" border="0">
+                            <table width="100%" align="left" cellspacing="0" cellpadding="0" border="0" class="style24 style58">
                                 <tbody>
                                     <tr>
-                                        <td style="padding-top: 9px;padding-left: 18px;padding-bottom: 9px;padding-right: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                            <table class="mcnTextContentContainer" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" border="0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;" valign="top">
-                                                            ${cat}&nbsp;&nbsp;
-                                                            <span class="copy-btn tooltip" data-clipboard-target="#${catsCollar}">📋<span class="tooltiptext">Copiar texto</span></span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        <td class="style25" valign="top">
+                                            ${cat}&nbsp;&nbsp;
+                                            <span class="copy-btn tooltip" data-clipboard-target="#${catsCollar}">📋<span class="tooltiptext">Copiar texto</span></span>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -132,13 +120,13 @@ const UI = {
         `
 
     let listHTML = `
-            <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                <tbody class="mcnTextBlockOuter">
+            <table width="100%">
+                <tbody>
                     <tr>
-                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <td valign="top">
 
                             <!--[if mso]>
-                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                            <table align="left" width="100%" style="width:100%;">
                             <tr>
                             <![endif]-->
 
@@ -146,36 +134,14 @@ const UI = {
                             <td valign="top" width="600" style="width:600px;">
                             <![endif]-->
 
-                            <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" class="mcnTextContentContainer">
+                            <table align="left" width="100%">
                                 <tbody>
                                     <tr>
-                                        <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
-                                            <div id="${catsCollar}" class="comment-item" style="margin: 0px 0px 2px;padding: 5px;position: relative;color: #000000;font-family: &quot;Times New Roman&quot;;font-size: medium;font-style: normal;font-variant-ligatures: normal;font-variant-caps: normal;font-weight: 400;letter-spacing: normal;orphans: 2;text-align: start;text-indent: 0px;text-transform: none;white-space: normal;widows: 2;word-spacing: 0px;-webkit-text-stroke-width: 0px;text-decoration-style: initial;text-decoration-color: initial;">
+                                        <td valign="top" class="text_box">
+                                            <div id="${catsCollar}" class="comment-item">
                                             ${weekly.categories[cat]
                                               .map(item => {
-                                                return `
-                                                        <div class="category-item" style="padding: 1rem 0;">
-                                                        ${
-                                                          type === 'html'
-                                                            ? item.htmlBody
-                                                            : type === 'md'
-                                                              ? item.mdBody
-                                                              : item.outline
-                                                        }
-                                                        ${
-                                                          type !== 'outline'
-                                                            ? `
-                                                                <br>
-                                                                <em>Indicado por
-                                                                    <a 
-                                                                        href="${item.author.url}" target="_blank"
-                                                                        style="${style}">@${item.author.login}</a>
-                                                                </em>`
-                                                            : ''
-                                                        }
-                                                        <br>
-                                                        </div>
-                                                    `
+                                                return this.returnCategoryItem(type, item)
                                               })
                                               .join('')}
                                             </div>
@@ -203,5 +169,20 @@ const UI = {
   applyCartoon(weekly) {
     // if (!weekly.categories.cartoon) {
     // }
+  },
+  returnCategoryItem(type, item) {
+    var resultado = '<div class="category-item">'
+
+    if (type === 'html') resultado += item.htmlBody
+    else if (type === 'md') resultado += item.mdBody
+    else resultado += item.outline
+
+    if (type !== 'outline')
+      resultado += `
+            <br><em>Indicado por <a href="${item.author.url}" target="_blank" 
+            style="ui_style">@${item.author.login}</a></em><br>
+            `
+
+    return (resultado += '</div>')
   }
 }
