@@ -183,6 +183,6 @@ const UI = {
             style="ui_style">@${item.author.login}</a></em><br>
             `
 
-    return (resultado += '</div>')
+    return (resultado += '</div><br/>')
   }
 }
