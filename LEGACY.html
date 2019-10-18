@@ -216,7 +216,7 @@
 
 	<div contenteditable="true" class="title">Weekly #{{data.issueNumber}} - Título</div>
 	<div class="contributors">
-		<span>Um agradecimento especial aos nossos <a href="{{data.issueURL}}">{{data.contributorsLen}} colaboradores</a> da edição número <strong contentedibtale="true">{{data.issueNumber}}</strong></span>
+		<span>Um agradecimento especial aos nossos <a href="{{data.issueURL}}">{{data.contributorsLen}} contribuidores</a> da edição número <strong contentedibtale="true">{{data.issueNumber}}</strong></span>
 		<div>
 			{% for key, contributor in data.contributors %}
 				<a href="{{ contributor.url }}">
